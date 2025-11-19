@@ -12,7 +12,7 @@
 // ==================== API 配置 ====================
 const API_CONFIG = {
   // 您部署在 Vercel 的API地址
-  BASE_URL: 'https://your-project.vercel.app',
+  BASE_URL: 'https://windsurf-steel.vercel.app',
   
   // API密钥（可选，如果后端设置了的话）
   API_KEY: '',
