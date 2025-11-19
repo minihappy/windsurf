@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "🚀 Windsurf 自动注册助手 (开源版)",
+  "version": "4.0.0",
+  "description": "完全开源 - 支持临时邮箱自动获取验证码，或自建API全自动注册",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://windsurf.com/*",
+    "https://codeium.com/*",
+    "https://*.vercel.app/*",
+    "https://www.1secmail.com/*",
+    "https://api.guerrillamail.com/*",
+    "https://*.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://windsurf.com/account/register*"],
+      "js": ["content/content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "🚀 Windsurf 注册助手"
+  }
+}
